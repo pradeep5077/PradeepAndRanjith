@@ -1,0 +1,18 @@
+public class SpeedConverter
+{
+    public static void main(String[] args) {
+
+        long num = toMilesPerHour(-5.6);
+        System.out.println(num);
+    }
+
+    public static long toMilesPerHour(double kiloMetersPerHour){
+        if (kiloMetersPerHour < 0){
+            return -1;
+        }else {
+            return Math.round(kiloMetersPerHour/1.609);
+        }
+
+
+    }
+}

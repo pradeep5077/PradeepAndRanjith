@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class TeenNumberChecker
+{
+    public static void main(String[] args)
+    {
+        int first = 0;
+        int second = 0;
+        int third = 0;
+        int forth = 0;
+        Scanner s2 = new Scanner(System.in);
+        System.out.println("Enter option 1. single person age 2. three person age ");
+        int option = s2.nextInt();
+
+        if (option == 2) {
+            Scanner s1 = new Scanner(System.in);
+            System.out.println("Enter the three persons age");
+            first = s1.nextInt();
+            second = s1.nextInt();
+            third = s1.nextInt();
+            hasTeen( first, second, third);
+        }if (option == 1){
+            Scanner s3 = new Scanner(System.in);
+            System.out.println("enter single person age");
+            forth = s3.nextInt();
+
+        isteen(forth);
+    }
+//        hasTeen( first, second, third);
+//        isteen(forth);
+
+    }
+    public static void hasTeen(int first, int second, int third){
+        if((first>=13 && first <= 19) && (second>=13 && second<=19) && (third>=13 && third<=19)   ){
+            System.out.println("true");
+        }else{
+            System.out.println("false");
+        }
+
+    }
+    public static void isteen(int forth){
+        if (forth>=13 && forth<=19){
+            System.out.println("true");
+        }else {
+            System.out.println("false");
+        }
+    }
+}

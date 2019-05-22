@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class MinutesToYearsDaysCalculator
+{
+    public static void main(String[] args) {
+        int yy = 0;
+        int zz = 0;
+        Scanner s1 = new Scanner(System.in);
+        System.out.println("Enter the minutes");
+
+
+        int minutes = s1.nextInt();
+        printYearsAndDays(minutes);
+    }
+
+    public static void printYearsAndDays(long minutes){
+        if (minutes < 0) {
+            System.out.println("Invalid Value");
+        }else if (minutes > 0){
+            long yy = minutes / 525600;
+            long zz = (minutes % 525600) / 1440;
+            System.out.println(minutes + "="+ yy +"y and " + zz +" d");
+        }
+    }
+}

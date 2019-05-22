@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class AreaCalculator
+{
+    public static void main(String[] args) {
+//        double PI = 3.14;
+        Scanner s2 = new Scanner(System.in);
+        System.out.println("Enter option 1. area of a circle 2. sides of a rectangle ");
+        int option = s2.nextInt();
+
+
+        if (option == 1) {
+            Scanner s1 = new Scanner(System.in);
+            System.out.println("Enter the radius");
+
+            double radius = s1.nextDouble();
+
+            double ans = area(radius);
+            System.out.println("area of a circle" + ans);
+        }
+        if (option == 2){
+            Scanner s3 = new Scanner(System.in);
+            System.out.println("Enter x and y value");
+
+            double x = s3.nextDouble();
+            double y = s3.nextDouble();
+
+            double answer = area(x,y);
+            System.out.println("area of a rectangle" + answer);
+        }
+    }
+    public static double area(double radius){
+        if (radius < 0 ){
+            return -1;
+        }else {
+            return radius * radius * Math.PI;
+        }
+    }
+    public static double area(double x, double y){
+            if (x < 0 || y < 0){
+                return -1;
+            }else{
+                return x * y;
+            }
+    }
+}

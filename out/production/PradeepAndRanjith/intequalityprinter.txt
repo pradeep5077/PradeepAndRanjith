@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class IntEqualityPrinter
+{
+    public static void main(String[] args)
+    {
+        int first = 0;
+        int second = 0;
+        int third = 0;
+
+        Scanner s1 = new Scanner(System.in);
+        System.out.println("Enter the three number");
+        first = s1.nextInt();
+        second = s1.nextInt();
+        third = s1.nextInt();
+
+        printEqual(first, second , third);
+
+    }
+        public static void printEqual(int first, int second, int third){
+
+            if (first < 0 || second < 0 || third < 0){
+                System.out.println("invalid");
+            }else if (first == second && second == third && third == first){
+                System.out.println("all numbers are equal");
+            }else if(first != second && second != third && third != first){
+                System.out.println("All numbers are different");
+            }else{
+                System.out.println("Neither all are equal or different");
+            }
+
+    }
+}
