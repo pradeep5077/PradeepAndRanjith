@@ -1,0 +1,23 @@
+public class MegaBytesConverter
+{
+    public static void main(String[] args) {
+        printMegaBytesAndKiloBytes(2500);
+    }
+    public static void printMegaBytesAndKiloBytes(int x)
+    {
+        if(x<0)
+        {
+            System.out.println("Invalid Value");
+
+        }else
+        {
+            int kb=x%1024;
+
+
+            int mb=x/1024;
+            System.out.println(x+" KB = "+mb+" MB and "+kb+" KB");
+        }
+
+    }
+
+}

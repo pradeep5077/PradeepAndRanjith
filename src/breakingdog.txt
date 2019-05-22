@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class BarkingDog
+{
+    public static void main(String[] args) {
+        Scanner s1 = new Scanner(System.in);
+        System.out.println("Enter username");
+
+        Boolean bark = s1.nextBoolean();
+        int hourOfDay = s1.nextInt();
+
+
+        Shouldwakeup(bark,hourOfDay);
+    }
+
+    public static void Shouldwakeup(boolean bark, int  HourOfDay)
+    {
+        if (!bark&&(HourOfDay < 0 || HourOfDay > 23)) {
+            System.out.println("1st false");
+        }
+        if ((HourOfDay < 8 && HourOfDay > 22 && HourOfDay <= 23 && HourOfDay>= 0 )&& (bark) ){
+                    System.out.println("true");
+                }else{
+                System.out.println("2nd false");
+            }
+
+    }
+}

@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class EqualSumChecker
+{
+    public static void main(String[] args) {
+
+        Scanner s1 = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int a = s1.nextInt();
+        int b = s1.nextInt();
+        int c = s1.nextInt();
+
+
+        hasEqualSum(a,b,c);
+    }
+    public static void hasEqualSum(int a, int b, int c){
+        if (a+b == c){
+            System.out.println("true");
+        }else {
+            System.out.println("false");
+        }
+    }
+}

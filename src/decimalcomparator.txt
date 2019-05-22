@@ -1,0 +1,22 @@
+public class DecimalComparator
+    {
+        public static void main(String[] args)
+        {
+            System.out.println(areEqualByThreeDecimalPlaces(5.9635,5.9638));
+        }
+        public static boolean areEqualByThreeDecimalPlaces(double a,double b)
+        {
+            double x = a* 1000;
+            double y = b *1000;
+            if((int)x == (int)y)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+}
+
